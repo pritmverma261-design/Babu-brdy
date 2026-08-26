@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#09040b">
+<title>For Babu ❤️</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:#08040b;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{overflow-x:hidden}
+button{font:inherit}
+#app{min-height:100vh;background:radial-gradient(circle at 50% 0,#722552 0,#2b0c2e 35%,#08040b 78%);position:relative;overflow:hidden}
+#stars{position:fixed;inset:0;pointer-events:none}
+.star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;opacity:.35;animation:tw 2s infinite alternate}
+@keyframes tw{to{opacity:1;transform:scale(1.8)}}
+.scene{display:none;min-height:100vh;padding:30px 17px 55px;position:relative;z-index:2;align-items:center;justify-content:center;flex-direction:column;text-align:center}
+.scene.active{display:flex;animation:fade .65s ease}
+@keyframes fade{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.pill{border:1px solid #fff2;border-radius:99px;padding:9px 16px;color:#ffd9e9;background:#ffffff09;font-size:11px;letter-spacing:2.3px}
+h1{font-size:clamp(48px,15vw,84px);line-height:.9;letter-spacing:-4px;margin:24px 0 16px}
+.pink{color:#ff83bd}
+.lead{color:#ead0df;line-height:1.7;font-size:16px}
+.btn{border:0;border-radius:999px;padding:16px 28px;font-weight:850;background:linear-gradient(135deg,#ffe5ef,#ff70b7);color:#351225;box-shadow:0 15px 45px #ff5baa42}
+.btn:active{transform:scale(.95)}
+.secondary{border:1px solid #ff8bc366;background:#ffffff0b;color:#ffe4ef}
+.cinematic{max-width:620px}
+.type{min-height:3em}
+.tap{margin-top:15px;color:#ffbdd9;font-size:13px;animation:pulse 1.5s infinite}
+@keyframes pulse{50%{opacity:.45}}
+.memory{width:min(94vw,590px);position:relative}
+.photoCard{display:none}
+.photoCard.active{display:block;animation:photoIn .8s ease}
+@keyframes photoIn{from{opacity:0;transform:scale(.94) translateY(15px)}to{opacity:1;transform:none}}
+.photoCard img{width:100%;max-height:67vh;object-fit:contain;border-radius:24px;display:block;box-shadow:0 25px 75px #000b;background:#120914}
+.caption{padding:20px 8px 4px}
+.caption b{display:block;font-family:Georgia,serif;font-size:22px;color:#ffe2ef;line-height:1.35}
+.caption span{display:block;margin-top:9px;color:#dcbccc;line-height:1.55}
+.memoryNav{display:flex;gap:10px;margin-top:15px}
+.memoryNav button{padding:12px 19px;border-radius:99px}
+.cakeBox{width:min(94vw,610px);position:relative;border-radius:26px;overflow:hidden;background:#090509;box-shadow:0 25px 80px #000c}
+.cakeBox img{width:100%;display:block}
+.cakeShade{position:absolute;inset:0;background:radial-gradient(circle at 50% 20%,transparent,#0004 85%);pointer-events:none}
+.candle{position:absolute;width:8px;height:65px;border-radius:5px;background:repeating-linear-gradient(135deg,#ff5f9f 0 7px,#fff 7px 12px);z-index:5;cursor:pointer;transform:translateX(-50%)}
+.c1{left:31%;top:35%}.c2{left:41%;top:29%}.c3{left:51%;top:27%}.c4{left:61%;top:30%}.c5{left:70%;top:35%}
+.flame{position:absolute;left:50%;top:-32px;width:18px;height:30px;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 75%,#fff 0 18%,#ffd35a 35%,#ff7815 63%,transparent 72%);border-radius:50%;filter:drop-shadow(0 0 9px #ffb52c);animation:flicker .11s infinite alternate}
+@keyframes flicker{from{transform:translateX(-50%) rotate(-4deg) scale(.93)}to{transform:translateX(-50%) rotate(5deg) scale(1.08)}}
+.off .flame{display:none}.off:after{content:"";position:absolute;left:50%;top:-22px;width:3px;height:30px;background:linear-gradient(#ddd9,transparent);animation:smoke 1.2s forwards}
+@keyframes smoke{to{opacity:0;transform:translate(-50%,-35px) scale(1.8)}}
+.status{margin:15px 0 10px;padding:10px 17px;border:1px solid #fff2;border-radius:99px;background:#ffffff09;color:#ffd8e9}
+.actions{display:flex;gap:10px;width:min(94vw,610px)}.actions>*{flex:1}
+.letter{width:min(94vw,570px);padding:28px 22px;border-radius:28px;background:linear-gradient(145deg,#fff8fb,#ffe6f0);color:#4a2035;text-align:left;box-shadow:0 25px 70px #000b}
+.letter h2{font:36px Georgia,serif;color:#682743}.letter p{font:16px Georgia,serif;line-height:1.85}
+.sign{text-align:center;color:#87385e;font:21px cursive}
+.envelope{width:min(90vw,390px);padding:35px 22px;border:1px solid #ff9dcc55;border-radius:25px;background:linear-gradient(145deg,#5d1947,#260d2c);box-shadow:0 25px 70px #000b}
+.gift{font-size:100px;cursor:pointer;animation:float 2s infinite ease-in-out}
+@keyframes float{50%{transform:translateY(-10px) rotate(2deg)}}
+.final h2{font-size:clamp(38px,11vw,64px);margin:20px 0 8px}.final p{color:#e7c7d8}
+.fire{position:fixed;pointer-events:none;font-size:25px;z-index:20;animation:fall 3.2s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+@media(max-width:430px){.actions{flex-direction:column}.candle{height:55px}.c1{top:37%}.c2{top:33%}.c3{top:31%}.c4{top:34%}.c5{top:37%}}
+</style>
+</head>
+<body>
+<div id="app"><div id="stars"></div>
+
+<section id="intro" class="scene active">
+ <div class="pill">A LITTLE WORLD MADE FOR YOU</div>
+ <h1>Happy Birthday<br><span class="pink">Babu</span> ❤️</h1>
+ <p class="lead cinematic">Not just a birthday wish...<br>I made a little journey for you.</p>
+ <button class="btn" onclick="go('memory')">Begin the surprise ✨</button>
+ <div class="tap">tap to begin</div>
+</section>
+
+<section id="memory" class="scene">
+ <div class="pill">01 · MEMORIES</div>
+ <h2>Some moments stay forever ❤️</h2>
+ <div class="memory">
+  <div class="photoCard active"><img src="memory_1.jpg"><div class="caption"><b>“Sote-sote bhi itni cute kaise lagti ho? 😴❤️”</b><span>Uth jao Babu... koi hai jo tumhari smile ka wait kar raha hai. 🥹💕</span></div></div>
+  <div class="photoCard"><img src="memory_2.jpg"><div class="caption"><b>“Somewhere along the way, holding your hand became my favourite place.”</b><span>And every step feels a little better with you. ❤️</span></div></div>
+  <div class="photoCard"><img src="memory_3.jpg"><div class="caption"><b>“Ordinary places become beautiful with the right person.”</b><span>This is one of those little moments I want to remember. ✨</span></div></div>
+  <div class="photoCard"><img src="memory_4.jpg"><div class="caption"><b>“Maybe we didn’t know it then...”</b><span>But moments like this were quietly becoming memories. ❤️</span></div></div>
+  <div class="photoCard"><img src="memory_5.jpg"><div class="caption"><b>“You make simple moments feel special.”</b><span>And honestly, just being you is more than enough. 🌸</span></div></div>
+  <div class="photoCard"><img src="memory_6.jpg"><div class="caption"><b>“A little crazy, a little cute, completely you.”</b><span>And that is exactly what makes you so special. ❤️</span></div></div>
+  <div class="photoCard"><img src="memory_7.jpg"><div class="caption"><b>“If I could keep a few frames forever...”</b><span>This would be one of the ones I would never let go. ❤️</span></div></div>
+ </div>
+ <div class="memoryNav"><button class="btn secondary" onclick="prev()">←</button><button class="btn" onclick="next()">Next memory →</button></div>
+</section>
+
+<section id="cake" class="scene">
+ <div class="pill">02 · MAKE A WISH</div><h2>Happy 21st, Babu 🎂</h2>
+ <p class="lead">Tap the candles and make your wish. 🕯️</p>
+ <div class="cakeBox">
+  <img src="cake-1.jpg" alt="Birthday cake">
+  <div class="cakeShade"></div>
+  <div class="candle c1" onclick="out(0)"><i class="flame"></i></div><div class="candle c2" onclick="out(1)"><i class="flame"></i></div><div class="candle c3" onclick="out(2)"><i class="flame"></i></div><div class="candle c4" onclick="out(3)"><i class="flame"></i></div><div class="candle c5" onclick="out(4)"><i class="flame"></i></div>
+ </div>
+ <div class="status">🔥 Candles burning: <b id="count">5</b></div>
+ <div class="actions"><button class="btn" onclick="blow()">💨 Blow Next</button><button class="btn secondary" onclick="all()">✨ Blow All</button></div>
+ <button id="cakeNext" class="btn" style="display:none;margin-top:16px" onclick="go('letter')">My message for you 💌</button>
+</section>
+
+<section id="letter" class="scene">
+ <div class="pill">03 · FROM MY HEART</div>
+ <div class="letter">
+  <small>JUST FOR BABU ❤️</small><h2>Dear Khushi,</h2>
+  <p>Data nahi tumhe ye baat kitni baar batayi hai, but having you in my life is one of the most beautiful things that ever happened to me.</p>
+  <p>Tumhare saath har chhoti si baat bhi special lagti hai. I may not always be able to express everything I feel, but I hope you always know how much you mean to me.</p>
+  <p>On your birthday, I just wish ki tum hamesha khush raho, tumhari smile kabhi kam na ho, aur life tumhe har wo happiness de jo tum deserve karti ho. ✨</p>
+  <div class="sign">Happy Birthday, my favourite person ❤️</div>
+ </div>
+ <button class="btn" style="margin-top:20px" onclick="go('gift')">One last surprise 🎁</button>
+</section>
+
+<section id="gift" class="scene">
+ <div class="pill">04 · ONE LAST THING</div><h2>There is something waiting...</h2>
+ <div class="envelope"><div class="gift" onclick="finale()">🎁</div><p>Tap the gift ❤️</p></div>
+</section>
+
+<section id="final" class="scene final">
+ <div class="pill">FOR YOU, BABU</div><div style="font-size:70px">🎆</div>
+ <h2>Happy Birthday<br><span class="pink">Babu ❤️</span></h2>
+ <p>May your smile always have a reason to stay. 🌸</p>
+ <p>And may this new year of your life be your most beautiful one yet.</p>
+ <button class="btn" onclick="location.reload()">Replay our little story ↻</button>
+</section>
+</div>
+
+<script>
+for(let i=0;i<85;i++){let s=document.createElement('i');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*2+'s';document.getElementById('stars').appendChild(s)}
+function go(id){document.querySelectorAll('.scene').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');scrollTo(0,0)}
+let mi=0,cards=document.querySelectorAll('.photoCard');
+function showCard(){cards.forEach((x,i)=>x.classList.toggle('active',i===mi))}
+function next(){if(mi<cards.length-1){mi++;showCard()}else go('cake')}
+function prev(){if(mi>0){mi--;showCard()}}
+let off=[0,0,0,0,0];
+function out(i){if(off[i])return;off[i]=1;document.querySelectorAll('.candle')[i].classList.add('off');document.getElementById('count').textContent=5-off.reduce((a,b)=>a+b,0);if(off.every(Boolean)){document.getElementById('cakeNext').style.display='inline-block';celebrate()}}
+function blow(){let i=off.findIndex(x=>!x);if(i>=0)out(i)}
+function all(){for(let i=0;i<5;i++)if(!off[i])setTimeout(()=>out(i),i*220)}
+function celebrate(){for(let i=0;i<70;i++){let x=document.createElement('span');x.className='fire';x.textContent=['❤️','✨','🎉','🎊','💖','⭐'][Math.floor(Math.random()*6)];x.style.left=Math.random()*100+'%';x.style.animationDelay=Math.random()*1.2+'s';document.body.appendChild(x);setTimeout(()=>x.remove(),4500)}}
+function finale(){go('final');celebrate();setTimeout(celebrate,1000);setTimeout(celebrate,2000)}
+</script>
+</body>
+</html>
