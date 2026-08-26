@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="theme-color" content="#12030f">
+<title>Happy Birthday Khushi ❤️</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#070208;color:#fff5fa;font-family:Georgia,'Times New Roman',serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(circle at 50% 10%,#79154c 0,#31091f 28%,#0c020b 72%)}
+body:after{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(circle at 15% 25%,rgba(255,60,150,.12),transparent 25%),radial-gradient(circle at 85% 75%,rgba(255,80,140,.1),transparent 30%)}
+#particles{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.p{position:absolute;bottom:-30px;opacity:.7;animation:float linear infinite;color:#ff9bc6}
+@keyframes float{from{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.8}to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+#music{position:fixed;right:16px;top:16px;width:52px;height:52px;border-radius:50%;z-index:50;border:1px solid rgba(255,255,255,.35);background:rgba(40,5,30,.72);backdrop-filter:blur(12px);color:#ffd2e7;font-size:22px;box-shadow:0 0 25px rgba(255,80,160,.22)}
+#music.playing{animation:ring 1.5s infinite}
+@keyframes ring{50%{box-shadow:0 0 0 9px rgba(255,100,170,.08),0 0 30px rgba(255,80,160,.45)}}
+#musicTip{position:fixed;right:18px;top:76px;z-index:50;background:rgba(20,3,15,.9);padding:8px 12px;border-radius:20px;font:12px Arial;color:#ffd4e6;border:1px solid rgba(255,150,200,.2)}
+section{min-height:100svh;padding:80px 20px 60px;display:flex;align-items:center;justify-content:center;position:relative;z-index:1}
+.wrap{width:min(760px,100%);text-align:center}
+.kicker{font:11px Arial,sans-serif;letter-spacing:5px;text-transform:uppercase;color:#f3a7c9}
+.heroHeart{font-size:82px;margin:20px 0;filter:drop-shadow(0 0 25px #ff438f);animation:heartbeat 1.5s infinite}
+@keyframes heartbeat{50%{transform:scale(1.12)}}
+h1{font-size:clamp(48px,15vw,92px);line-height:.9;margin:8px 0 20px;text-shadow:0 8px 35px rgba(0,0,0,.35)}
+.pink{color:#ff8ab8}
+.lead{font-size:19px;line-height:1.75;color:#f5cfdf;max-width:600px;margin:auto}
+.btn{margin-top:30px;border:1px solid #ff72ac;border-radius:999px;background:linear-gradient(135deg,#9b155c,#40082e);color:white;padding:15px 24px;font:15px Arial;box-shadow:0 12px 35px rgba(150,20,90,.25)}
+.scroll{margin-top:45px;font:12px Arial;color:#d99ab9;letter-spacing:2px;animation:bob 1.8s infinite}
+@keyframes bob{50%{transform:translateY(7px)}}
+.divider{height:1px;width:80px;background:linear-gradient(90deg,transparent,#ff76af,transparent);margin:25px auto}
+.memory{margin:0 auto 75px;position:relative}
+.memory img{width:100%;display:block;border-radius:26px;box-shadow:0 25px 70px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.12)}
+.memory .caption{font-size:clamp(23px,6vw,31px);line-height:1.35;margin:24px 8px 10px}
+.memory .note{font:15px Arial;line-height:1.75;color:#dbb0c6;max-width:620px;margin:auto}
+.tag{display:inline-block;margin-top:18px;border:1px solid rgba(255,140,190,.25);border-radius:999px;padding:7px 13px;font:11px Arial;color:#e8abc5;letter-spacing:1px}
+#gallery{padding-top:100px}
+.galleryTitle{margin-bottom:55px}
+.galleryTitle h2{font-size:clamp(38px,11vw,62px);margin-top:12px}
+.final{background:radial-gradient(circle at 50% 30%,#5d0c3c 0,#190516 58%,#080108 100%);min-height:100svh}
+.final h2{font-size:clamp(42px,12vw,72px);margin:14px 0 25px}
+.final p{font-size:18px;line-height:1.9;color:#f2c8d9;margin:18px auto;max-width:650px}
+.signature{font-size:25px;margin-top:35px;color:#ffb1d0}
+.reveal{opacity:0;transform:translateY(45px);transition:opacity .9s ease,transform .9s ease}
+.reveal.show{opacity:1;transform:none}
+#musicStatus{position:fixed;left:50%;bottom:15px;transform:translateX(-50%);z-index:50;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.1);border-radius:30px;padding:9px 15px;font:12px Arial;color:#ffd5e6;white-space:nowrap;transition:.4s}
+.hidden{opacity:0;pointer-events:none}
+</style>
+</head>
+<body>
+<div id="particles"></div>
+
+<audio id="audio" loop preload="auto" playsinline>
+  <source src="sajnire.mp3" type="audio/mpeg">
+</audio>
+<button id="music" aria-label="Play music">♫</button>
+<div id="musicTip">Tap ♫ for music 🎵</div>
+<div id="musicStatus">Tap anywhere once to start the music ❤️</div>
+
+<section id="home">
+<div class="wrap reveal">
+  <div class="kicker">A little surprise • made only for you</div>
+  <div class="heroHeart">❤️</div>
+  <h1>Happy Birthday<br><span class="pink">Khushi</span></h1>
+  <div class="divider"></div>
+  <p class="lead">Some people become a part of your life…<br>and somehow become your favourite part. ❤️</p>
+  <button class="btn" onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">Open Our Memories ↓</button>
+  <div class="scroll">↓ TAP &amp; SCROLL SLOWLY ↓</div>
+</div>
+</section>
+
+<section id="gallery">
+<div class="wrap">
+ <div class="galleryTitle reveal">
+   <div class="kicker">Our little collection</div>
+   <h2>Moments I Want<br><span class="pink">To Keep Forever</span></h2>
+   <div class="divider"></div>
+ </div>
+
+ <article class="memory reveal">
+   <img src="memory_1.jpg" alt="Khushi memory 1" loading="eager">
+   <div class="caption">“Sote-sote bhi itni cute kaise lagti ho? 😴❤️”</div>
+   <div class="note">Uth jao Babu… koi hai jo tumhari smile ka wait kar raha hai. 🥹💕</div>
+   <span class="tag">THE CUTEST SLEEPY MOMENT</span>
+ </article>
+
+ <article class="memory reveal">
+   <img src="memory_2.jpg" alt="Khushi memory 2" loading="lazy">
+   <div class="caption">“Bas tumhara haath pakda tha… aur safar yaadgaar ho gaya. ❤️”</div>
+   <div class="note">Kuch raaste destination ki wajah se nahi, kisi khaas insaan ke saath hone ki wajah se yaad rehte hain.</div>
+   <span class="tag">HAND IN HAND</span>
+ </article>
+
+ <article class="memory reveal">
+   <img src="memory_3.jpg" alt="Khushi memory 3" loading="lazy">
+   <div class="caption">“Tumhari smile ka koi filter nahi chahiye. ✨❤️”</div>
+   <div class="note">Kuch tasveerein sirf photos nahi hoti… woh ek poora moment apne andar sambhal kar rakhti hain.</div>
+   <span class="tag">THAT BEAUTIFUL SMILE</span>
+ </article>
+
+ <article class="memory reveal">
+   <img src="memory_4.jpg" alt="Khushi memory 4" loading="lazy">
+   <div class="caption">“Thodi si cute, thodi si pagal… aur bilkul meri favourite. 🥹❤️”</div>
+   <div class="note">Tum jaisi ho, waise hi sabse achhi ho. Bas isi version ko hamesha smile karte dekhna hai.</div>
+   <span class="tag">MY FAVOURITE PERSON</span>
+ </article>
+
+ <article class="memory reveal">
+   <img src="memory_5.jpg" alt="Khushi memory 5" loading="lazy">
+   <div class="caption">“Khushi naam hi kaafi hai… tum ho to khushi hai. ❤️”</div>
+   <div class="note">May your smile stay this beautiful, your heart stay this soft, and your days become everything you deserve.</div>
+   <span class="tag">JUST YOU</span>
+ </article>
+
+ <article class="memory reveal">
+   <img src="memory_6.jpg" alt="Khushi memory 6" loading="lazy">
+   <div class="caption">“Har pose se zyada khoobsurat tumhari woh hasi hai. 🌸”</div>
+   <div class="note">And yes… I could save a thousand memories like this and still want one more.</div>
+   <span class="tag">PURE HAPPINESS</span>
+ </article>
+
+ <article class="memory reveal">
+   <img src="memory_7.jpg" alt="Khushi memory 7" loading="lazy">
+   <div class="caption">“Somewhere between these moments, you became my favourite person. ❤️”</div>
+   <div class="note">I don't know when it happened… I just know that these little moments mean more than I can explain.</div>
+   <span class="tag">A MEMORY TO KEEP</span>
+ </article>
+
+ <article class="memory reveal">
+   <img src="cake-1.jpg" alt="Birthday cake" loading="lazy">
+   <div class="caption">“Aaj ka din tumhara hai… aur meri favourite wish bhi. 🎂❤️”</div>
+   <div class="note">Happy Birthday, Khushi. May this new year of your life bring you more smiles, more peace and countless beautiful moments.</div>
+   <span class="tag">MAKE A WISH 🎂</span>
+ </article>
+</div>
+</section>
+
+<section class="final">
+<div class="wrap reveal">
+ <div class="kicker">One last thing I want to say</div>
+ <div class="heroHeart">💖</div>
+ <h2>Dear Khushi,</h2>
+ <div class="divider"></div>
+ <p>Pata nahi tumhe ye baat kitni baar batayi hai, but having you in my life is one of the most beautiful things that ever happened to me.</p>
+ <p>Tumhare saath har chhoti si baat bhi special lagti hai. I may not always be able to express everything I feel, but I hope you always know how much you mean to me.</p>
+ <p>On your birthday, I just wish ki tum hamesha khush raho, tumhari smile kabhi kam na ho, aur life tumhe har woh happiness de jo tum deserve karti ho.</p>
+ <p><strong>Happy Birthday, my favourite person. ❤️</strong></p>
+ <div class="signature">Always keep smiling, Babu 🥹💕</div>
+ <div class="heroHeart">❤️</div>
+</div>
+</section>
+
+<script>
+const audio=document.getElementById('audio');
+const music=document.getElementById('music');
+const status=document.getElementById('musicStatus');
+const tip=document.getElementById('musicTip');
+
+function musicOn(){
+ audio.play().then(()=>{
+   music.classList.add('playing');
+   music.textContent='🔊';
+   status.classList.add('hidden');
+   tip.classList.add('hidden');
+ }).catch(()=>{});
+}
+function musicToggle(){
+ if(audio.paused) musicOn();
+ else {audio.pause();music.classList.remove('playing');music.textContent='♫';status.textContent='Music paused';status.classList.remove('hidden');}
+}
+music.addEventListener('click',musicToggle);
+
+// Browsers block audible autoplay until the visitor interacts.
+// First tap anywhere starts the uploaded song; after that it loops continuously.
+document.addEventListener('pointerdown',()=>{if(audio.paused)musicOn()},{once:true});
+document.addEventListener('touchstart',()=>{if(audio.paused)musicOn()},{once:true,passive:true});
+
+document.addEventListener('visibilitychange',()=>{
+ if(!document.hidden && audio.paused) audio.play().catch(()=>{});
+});
+
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('show')});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// Floating hearts
+const holder=document.getElementById('particles');
+for(let i=0;i<18;i++){
+ const x=document.createElement('span');
+ x.className='p';x.textContent=Math.random()>.5?'♥':'✦';
+ x.style.left=Math.random()*100+'%';
+ x.style.fontSize=(10+Math.random()*14)+'px';
+ x.style.animationDuration=(8+Math.random()*10)+'s';
+ x.style.animationDelay=(-Math.random()*12)+'s';
+ holder.appendChild(x);
+}
+</script>
+</body>
+</html>
